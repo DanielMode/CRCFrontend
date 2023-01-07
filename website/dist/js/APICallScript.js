@@ -1,4 +1,4 @@
-fetch("https://crcapi.jcosioresume.com/CRCResource",{
+fetch("https://pwaxoj56de.execute-api.us-east-1.amazonaws.com/Dev/",{
     method: "POST",
     body: JSON.stringify({})
 })
