@@ -1,5 +1,5 @@
-fetch("https://pwaxoj56de.execute-api.us-east-1.amazonaws.com/Dev/",{
-    method: "POST",
+fetch('https://dwdhdlhvu6.execute-api.us-east-1.amazonaws.com/dev',{
+    method: "GET",
     body: JSON.stringify({})
 })
     .then(response => response.json())
@@ -13,8 +13,8 @@ fetch("https://pwaxoj56de.execute-api.us-east-1.amazonaws.com/Dev/",{
 
     function displayCount(data) {
         const count = data.ddbResponse.Attributes;
-        const countDiv = document.getElementById("VisitorCount");
-        const countName = count.VisitorCount;
+        const countDiv = document.getElementById("wow");
+        const countName = count.number;
         const heading = document.createElement("p");
         heading.innerHTML = "You are visitor number " + countName +".";
         countDiv.appendChild(heading);
