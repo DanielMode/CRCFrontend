@@ -15,13 +15,13 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <script>
-        async function updateVisitorCount() {
-            const response = await fetch('https://u4gu61b9ce.execute-api.us-east-1.amazonaws.com/dev/visitors');
-            const data = await response.json();
-            document.getElementById('visitor-count').innerText = data;
-        }
-
-        window.onload = updateVisitorCount;
+            async function updateVisitorCount() {
+                const response = await fetch('https://u4gu61b9ce.execute-api.us-east-1.amazonaws.com/dev/visitors');
+                const data = await response.text();
+                document.getElementById('visitor-count').innerText = data;
+            }
+            window.onload = updateVisitorCount;
+        
         </script>
     </head>
     <body id="page-top">
@@ -61,7 +61,8 @@
                         <a class="social-icon" href="https://www.linkedin.com/in/danielomode" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
                         <a class="social-icon" href="https://github.com/DanielMode" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
                     </div>
-                    <p>Welcome to My Resume</p>
+                    <br>
+                    <br>
                     <p id="visitor-count"></p>
                 </div>
             </section>
