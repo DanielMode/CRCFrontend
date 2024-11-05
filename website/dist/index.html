@@ -16,12 +16,15 @@
         <link href="css/styles.css" rel="stylesheet" />
         <script>
             async function updateVisitorCount() {
-                const response = await fetch('https://u4gu61b9ce.execute-api.us-east-1.amazonaws.com/dev/visitors');
-                const data = await response.json();
-                document.getElementById('visitor-count').innerText = data.body;
+                try {
+                    const response = await fetch('https://u4gu61b9ce.execute-api.us-east-1.amazonaws.com/dev/visitors');
+                    const data = await response.json(); // parse as JSON
+                    document.getElementById('visitor-count').innerText = data.body;
+                } catch (error) {
+                    console.error("Error fetching visitor count:", error);
+                }
             }
             window.onload = updateVisitorCount;
-        
         </script>
     </head>
     <body id="page-top">
