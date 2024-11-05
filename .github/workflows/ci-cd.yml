@@ -27,7 +27,7 @@ jobs:
       # Step 3: Sync website content to the S3 bucket
       - name: Sync website to S3
         run: |
-          aws s3 sync ./website/dist s3://genteelcv --delete
+          aws s3 sync ./website/dist s3://danresume --delete
         # Ensure the directory './public' matches where your website content is located
         # Replace 'YOUR-S3-BUCKET-NAME' with your actual S3 bucket name
 
