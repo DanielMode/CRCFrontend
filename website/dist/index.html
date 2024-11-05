@@ -18,8 +18,8 @@
             async function updateVisitorCount() {
                 try {
                     const response = await fetch('https://u4gu61b9ce.execute-api.us-east-1.amazonaws.com/dev/visitors');
-                    const data = await response.json(); // parse as JSON
-                    document.getElementById('visitor-count').innerText = data.body;
+                    const data = await response.text(); // parse as JSON
+                    document.getElementById('visitor-count').innerText = data;
                 } catch (error) {
                     console.error("Error fetching visitor count:", error);
                 }
