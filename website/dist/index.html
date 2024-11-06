@@ -17,9 +17,9 @@
         <script>
             async function updateVisitorCount() {
                 try {
-                    const response = await fetch('https://dwdhdlhvu6.execute-api.us-east-1.amazonaws.com/dev');
+                    const response = await fetch('https://u4gu61b9ce.execute-api.us-east-1.amazonaws.com/dev/visitors');
                     const data = await response.json(); // parse as JSON
-                    document.getElementById('visitor-count').innerText = data.Attributes.number;
+                    document.getElementById('visitor-count').innerText = data.body;
                 } catch (error) {
                     console.error("Error fetching visitor count:", error);
                 }
@@ -66,7 +66,7 @@
                     </div>
                     <br>
                     <br>
-                    <p> Visitor Count is now <p id="visitor-count"></p>
+                    <p id="visitor-count"></p>
                 </div>
             </section>
             <hr class="m-0" />
