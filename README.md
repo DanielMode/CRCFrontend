@@ -20,7 +20,7 @@ This frontend connects to a backend API (provided in a separate repository) to u
      ```
 
 2. **Upload to S3**:
-   - Use AWS CLI or S3 Console to upload files. The bucket should be set up in the backend infrastructure.
+   - Use AWS CLI or S3 Console to upload your website files. The bucket should be set up in the [Backend Infrastructure](https://github.com/DanielMode/CRCBackend).
 
 3. **Automate with GitHub Actions**:
    - Configure GitHub Actions to deploy the frontend files to S3 automatically when changes are pushed to the main branch.
