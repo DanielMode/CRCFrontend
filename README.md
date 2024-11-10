@@ -26,7 +26,7 @@ This frontend connects to a backend API (provided in a separate repository) to u
    - Files are automatically synchronized to the S3 bucket.
    - The website content is updated in real-time for immediate access by creating cloudfront invalidations.
 
-See `.github/workflows/deploy.yml` for the complete workflow configuration.
+See `.github/workflows/ci-cd.yml` for the complete workflow configuration.
 
 
 ## Related Repositories
