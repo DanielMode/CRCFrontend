@@ -28,8 +28,8 @@ jobs:
       - name: Sync website to S3
         run: |
           aws s3 sync ./website/dist s3://danresume --delete
-        # Ensure the directory './public' matches where your website content is located
-        # Replace 'YOUR-S3-BUCKET-NAME' with your actual S3 bucket name
+        # Ensure the directory './website/dist' matches where your website content is located
+        # Replace 'danresume' with your actual S3 bucket name
 
       # Step 4: Invalidate CloudFront cache to ensure new content is served
       - name: Create CloudFront invalidation
